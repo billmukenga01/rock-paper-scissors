@@ -19,8 +19,14 @@ reach 3 wins the game
 function getComputerChoice(){
    //use a math.floor and math.random function to genetate a number in the range of 1 and 3
    let randomNumber = Math.floor(Math.random()*3 ) + 1;
-
-   //use a conditional to 
+    //use a conditional to map each number to a specific string
+   if (randomNumber === 1){
+        return 'rock'; 
+   }else if(randomNumber === 2){
+        return 'paper';
+   }else{
+        return 'scissors';
+   }
 }
 
 //function to get the users input using prompt 
