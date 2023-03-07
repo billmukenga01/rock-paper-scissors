@@ -30,3 +30,10 @@ function getComputerChoice(){
 }
 
 //function to get play a round of the game
+
+function singleRound(playerSelection, computerSelection){
+
+    const computerSelection = getComputerChoice();
+    const playerSelection = prompt("Please choose :Rock, Paper, Scissors");
+
+}
