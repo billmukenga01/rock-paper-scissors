@@ -10,6 +10,7 @@
 reach 3 wins the game
 */
 
+
 // if userWins is equal to 3 exit game and console.log winner
 // else if computerWins is equal to 3 exit game and console.log winner
 //else continue playing
@@ -34,7 +35,7 @@ function getComputerChoice(){
 function singleRound(playerSelection, computerSelection){
     //call the getComputerChoice function and store the return value in the variable computerSelection
     const computerSelection = getComputerChoice();
-    //prompt the user for input and convert it to all lowercase
+    //prompt the user for input and convert it to all lowercase 
     const playerSelection = prompt("Please choose :Rock, Paper, Scissors").toLowerCase();
 
 
