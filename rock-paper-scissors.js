@@ -16,4 +16,11 @@ reach 3 wins the game
 
 //function to get the computer input randomly
 
+function getComputerChoice(){
+   //use a math.floor and math.random function to genetate a number in the range of 1 and 3
+   let randomNumber = Math.floor(Math.random()*3 ) + 1;
+
+   //use a conditional to 
+}
+
 //function to get the users input using prompt 
