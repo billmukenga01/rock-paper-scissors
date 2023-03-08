@@ -16,7 +16,9 @@ reach 3 wins the game
 //else continue playing
 
 //prompt the user for input
-const playerSelection = prompt("Please choose one: Rock, Paper, Scissors");
+const playerSelection = prompt("Please choose one: Rock, Paper, Scissors").toLowerCase;
+//saved the return value for the computer choice in a variable
+const computerSelection = getComputerChoice();
 //function to get the computer input randomly
 
 function getComputerChoice(){
