@@ -37,32 +37,32 @@ const computerChoice = function getComputerChoice(){
 //function to get play a round of the game
 
 function oneRound(playerSelection, computerPlay){
-    
+
     let computerSelection = computerPlay();
 
     if(playerSelection === 'rock' && computerSelection === 'rock'){
-        console.log(`Computer Choice: ${computerChoice}`)
+        console.log(`Computer Choice: ${computerSelection}`)
         return "Draw!";
     }else if(playerSelection === 'rock' && computerSelection === 'paper'){
-        console.log(`Computer Choice: ${computerChoice}`)
+        console.log(`Computer Choice: ${computerSelection}`)
         return "You Lose! Paper beats Rock";
     }else if(playerSelection === 'rock' && computerSelection === 'scissors'){
-        console.log(`Computer Choice: ${computerChoice}`)
+        console.log(`Computer Choice: ${computerSelection}`)
         return "You Win! Rock beats Scissors";
     }else if(playerSelection === 'paper' && computerSelection === 'rock'){
-        console.log(`Computer Choice: ${computerChoice}`)
+        console.log(`Computer Choice: ${computerSelection}`)
         return "You Win! Paper beats Rock";
     }else if(playerSelection === 'paper' && computerSelection === 'paper'){
-        console.log(`Computer Choice: ${computerChoice}`)
+        console.log(`Computer Choice: ${computerSelection}`)
         return "Draw!";
     }else if(playerSelection === 'paper' && computerSelection === 'scissors'){
-        console.log(`Computer Choice: ${computerChoice}`)
+        console.log(`Computer Choice: ${computerSelection}`)
         return "You Lose! Scissors beats Paper";
     }else if(playerSelection === 'scissors' && computerSelection === 'rock'){
-        console.log(`Computer Choice: ${computerChoice}`)
+        console.log(`Computer Choice: ${computerSelection}`)
         return "You Lose! Rock beats scissors";
     }else if(playerSelection === 'scissors' && computerSelection === 'paper'){
-        console.log(`Computer Choice: ${computerChoice}`)
+        console.log(`Computer Choice: ${computerSelection}`)
         return "You Win! Scissors beats Paper";
     }else{
         return "Draw!";
