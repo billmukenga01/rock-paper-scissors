@@ -1,19 +1,21 @@
-//randomly generate the computers choice out of a selection of rock, paper or scissors
-//ask the user for input
-//compare the two and see who wins the round
-//continue this process of playing the round and the best of 5 wins the game
+/*randomly generate the computers choice out of a selection of rock, paper or scissors
+ask the user for input
+compare the two and see who wins the round
+continue this process of playing the round and the best of 5 wins the game*/
 
 
-//create a variable userWins
-//create a variable computerWins
-/*on of the two will increment if the user or the computer wins the round and the fisrt one to
+/*create a variable userWins
+create a variable computerWins
+on of the two will increment if the user or the computer wins the round and the fisrt one to
 reach 3 wins the game
 */
 
 
-// if userWins is equal to 3 exit game and console.log winner
-// else if computerWins is equal to 3 exit game and console.log winner
-//else continue playing
+/*if userWins is equal to 3 exit game and console.log winner
+else if computerWins is equal to 3 exit game and console.log winner
+else continue playing*/
+
+
 //variables to save user wins and computer wins
 let userWins = 0;
 let computerWins = 0; 
@@ -43,6 +45,7 @@ const computerChoice = function getComputerChoice(){
 //function to get play a round of the game
 
 function oneRound(playerPlay, computerPlay){
+    //these varables have to be in the oneround function so as to prevent one value being used in the entire loop
     const playerSelection = playerPlay();
     const computerSelection = computerPlay();
 
