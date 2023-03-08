@@ -1,4 +1,7 @@
-/*randomly generate the computers choice out of a selection of rock, paper or scissors
+
+/*
+--------------------------LOGIC-----------------------------
+randomly generate the computers choice out of a selection of rock, paper or scissors
 ask the user for input
 compare the two and see who wins the round
 continue this process of playing the round and the best of 5 wins the game*/
@@ -6,14 +9,11 @@ continue this process of playing the round and the best of 5 wins the game*/
 
 /*create a variable userWins
 create a variable computerWins
-on of the two will increment if the user or the computer wins the round and the fisrt one to
-reach 3 wins the game
+on of the two will increment if the user or the computer wins the round and the one
+with the most at the end  of 5 games wins
 */
 
 
-/*if userWins is equal to 3 exit game and console.log winner
-else if computerWins is equal to 3 exit game and console.log winner
-else continue playing*/
 
 
 //variables to save user wins and computer wins
