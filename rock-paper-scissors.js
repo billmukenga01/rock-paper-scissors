@@ -96,11 +96,21 @@ function game(){
     if (userWins === computerWins){
         console.log("Draw Game!")
 
+        //reset values for next function call
+        userWins = 0;
+        computerWins = 0;
+
     }else if(userWins > computerWins){
         console.log("You Win Game!")
+
+        //reset value for next function call
+        userWins = 0;
     
     }else{
         console.log("Computer Wins Game!")
+
+        //reset value for next function call
+        computerWins = 0;
     }
 }
 game();
