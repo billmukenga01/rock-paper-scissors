@@ -18,25 +18,28 @@ reach 3 wins the game
 //prompt the user for input
 const playerChoice = prompt("Please choose one: Rock, Paper, Scissors").toLowerCase();
 //saved the return value for the computer choice in a variable to be used when calling oneRound function
-let computerChoice = getComputerChoice();
+const computerChoice = function getComputerChoice(){
+    //use a math.floor and math.random function to genetate a number in the range of 1 and 3
+    let randomNumber = Math.floor(Math.random()*3 ) + 1;
+     //use a conditional to map each number to a specific string 
+    if (randomNumber === 1){
+         return 'rock'; 
+    }else if(randomNumber === 2){
+         return 'paper';
+    }else{
+         return 'scissors';
+    }
+ }
+ 
 //function to get the computer input randomly
 
-function getComputerChoice(){
-   //use a math.floor and math.random function to genetate a number in the range of 1 and 3
-   let randomNumber = Math.floor(Math.random()*3 ) + 1;
-    //use a conditional to map each number to a specific string 
-   if (randomNumber === 1){
-        return 'rock'; 
-   }else if(randomNumber === 2){
-        return 'paper';
-   }else{
-        return 'scissors';
-   }
-}
 
 //function to get play a round of the game
 
-function oneRound(playerSelection, computerSelection){
+function oneRound(playerSelection, computerPlay){
+    
+    let computerSelection = computerPlay();
+
     if(playerSelection === 'rock' && computerSelection === 'rock'){
         console.log(`Computer Choice: ${computerChoice}`)
         return "Draw!";
