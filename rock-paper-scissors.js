@@ -37,7 +37,28 @@ function getComputerChoice(){
 //function to get play a round of the game
 
 function oneRound(playerSelection, computerSelection){
-    
+    if(playerSelection === 'rock' && computerSelection === 'rock'){
+
+    }else if(playerSelection === 'rock' && computerSelection === 'paper'){
+
+    }else if(playerSelection === 'rock' && computerSelection === 'scissors'){
+
+    }else if(playerSelection === 'paper' && computerSelection === 'rock'){
+
+    }else if(playerSelection === 'paper' && computerSelection === 'paper'){
+
+    }else if(playerSelection === 'paper' && computerSelection === 'scissors'){
+
+    }else if(playerSelection === 'scissors' && computerSelection === 'rock'){
+
+    }else if(playerSelection === 'scissors' && computerSelection === 'paper'){
+
+    }else{
+
+    }
+
+
+
 }
 
 
