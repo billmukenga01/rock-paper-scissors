@@ -29,8 +29,13 @@ const computerChoice = function getComputerChoice(){
     }else{
          return 'scissors';
     }
- }
- 
+}
+//variables to save user wins and computer wins
+let userWins;
+let computerWins; 
+
+
+
 //function to get the computer input randomly
 
 
@@ -45,24 +50,30 @@ function oneRound(playerSelection, computerPlay){
         return "Draw!";
     }else if(playerSelection === 'rock' && computerSelection === 'paper'){
         console.log(`Computer Choice: ${computerSelection}`)
+        computerWins += 1;
         return "You Lose! Paper beats Rock";
     }else if(playerSelection === 'rock' && computerSelection === 'scissors'){
         console.log(`Computer Choice: ${computerSelection}`)
+        userWins +=1;
         return "You Win! Rock beats Scissors";
     }else if(playerSelection === 'paper' && computerSelection === 'rock'){
         console.log(`Computer Choice: ${computerSelection}`)
+        userWins +=1;
         return "You Win! Paper beats Rock";
     }else if(playerSelection === 'paper' && computerSelection === 'paper'){
         console.log(`Computer Choice: ${computerSelection}`)
         return "Draw!";
     }else if(playerSelection === 'paper' && computerSelection === 'scissors'){
         console.log(`Computer Choice: ${computerSelection}`)
+        computerWins += 1;
         return "You Lose! Scissors beats Paper";
     }else if(playerSelection === 'scissors' && computerSelection === 'rock'){
         console.log(`Computer Choice: ${computerSelection}`)
+        computerWins += 1;
         return "You Lose! Rock beats scissors";
     }else if(playerSelection === 'scissors' && computerSelection === 'paper'){
         console.log(`Computer Choice: ${computerSelection}`)
+        userWins +=1;
         return "You Win! Scissors beats Paper";
     }else{
         return "Draw!";
@@ -71,6 +82,16 @@ function oneRound(playerSelection, computerPlay){
 //create function game to play 5 rounds
 function game(){
     for (let i = 0; i < 5; i++) {
-        // your code here!
+        oneRound(playerChoice, computerChoice);
+    }
+
+    if (userWins === computerWins){
+        console.log("Draw!")
+
+    }else if(userWins > computerWins){
+        console.log("You Win!")
+    
+    }else{
+        console.log("Computer Wins!")
     }
 }
