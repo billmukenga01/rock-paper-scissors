@@ -38,22 +38,31 @@ function getComputerChoice(){
 
 function oneRound(playerSelection, computerSelection){
     if(playerSelection === 'rock' && computerSelection === 'rock'){
+        console.log(`Computer Choice: ${computerChoice}`)
         return "Draw!";
     }else if(playerSelection === 'rock' && computerSelection === 'paper'){
+        console.log(`Computer Choice: ${computerChoice}`)
         return "You Lose! Paper beats Rock";
     }else if(playerSelection === 'rock' && computerSelection === 'scissors'){
+        console.log(`Computer Choice: ${computerChoice}`)
         return "You Win! Rock beats Scissors";
     }else if(playerSelection === 'paper' && computerSelection === 'rock'){
+        console.log(`Computer Choice: ${computerChoice}`)
         return "You Win! Paper beats Rock";
     }else if(playerSelection === 'paper' && computerSelection === 'paper'){
+        console.log(`Computer Choice: ${computerChoice}`)
         return "Draw!";
     }else if(playerSelection === 'paper' && computerSelection === 'scissors'){
+        console.log(`Computer Choice: ${computerChoice}`)
         return "You Lose! Scissors beats Paper";
     }else if(playerSelection === 'scissors' && computerSelection === 'rock'){
+        console.log(`Computer Choice: ${computerChoice}`)
         return "You Lose! Rock beats scissors";
     }else if(playerSelection === 'scissors' && computerSelection === 'paper'){
+        console.log(`Computer Choice: ${computerChoice}`)
         return "You Win! Scissors beats Paper";
     }else{
+        console.log(`Computer Choice: ${computerChoice}`)
         return "Draw!";
     }
 }
