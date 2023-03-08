@@ -16,7 +16,9 @@ reach 3 wins the game
 //else continue playing
 
 //prompt the user for input
-const playerChoice = prompt("Please choose one: Rock, Paper, Scissors").toLowerCase();
+const playerChoice = function{
+    prompt("Please choose one: Rock, Paper, Scissors").toLowerCase();
+}
 //saved the return value for the computer choice in a variable to be used when calling oneRound function
 const computerChoice = function getComputerChoice(){
     //use a math.floor and math.random function to genetate a number in the range of 1 and 3
@@ -95,3 +97,4 @@ function game(){
         console.log("Computer Wins!")
     }
 }
+game();
