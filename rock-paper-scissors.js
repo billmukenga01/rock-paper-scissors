@@ -68,5 +68,9 @@ function oneRound(playerSelection, computerPlay){
         return "Draw!";
     }
 }
-
-oneRound(playerChoice, computerChoice);
+//create function game to play 5 rounds
+function game(){
+    for (let i = 0; i < 5; i++) {
+        // your code here!
+    }
+}
