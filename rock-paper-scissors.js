@@ -15,13 +15,12 @@ reach 3 wins the game
 // else if computerWins is equal to 3 exit game and console.log winner
 //else continue playing
 //variables to save user wins and computer wins
-let userWins;
-let computerWins; 
+let userWins = 0;
+let computerWins = 0; 
 
 //function to prompt the user for input
 const playerChoice = function(){
-    
-    prompt("Please choose one: Rock, Paper, Scissors").toLowerCase();
+    return prompt("Please choose one: Rock, Paper, Scissors").toLowerCase();
 }
 //function expression to save the value of the function that generates the rock, paper, or scissors randomly
 const computerChoice = function getComputerChoice(){
@@ -84,7 +83,8 @@ function oneRound(playerPlay, computerPlay){
 //create function game to play 5 rounds
 function game(){
     for (let i = 0; i < 5; i++) {
-        oneRound(playerChoice, computerChoice);
+        const result = oneRound(playerChoice, computerChoice);
+        console.log(result);
     }
 //check who wins the 5 rounds
     if (userWins === computerWins){
