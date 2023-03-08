@@ -43,8 +43,8 @@ const computerChoice = function getComputerChoice(){
 
 //function to get play a round of the game
 
-function oneRound(playerSelection, computerPlay){
-    const playerSelection = playerChoice();
+function oneRound(playerPlay, computerPlay){
+    const playerSelection = playerPlay();
     const computerSelection = computerPlay();
 
     if(playerSelection === 'rock' && computerSelection === 'rock'){
