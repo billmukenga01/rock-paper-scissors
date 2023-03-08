@@ -18,7 +18,7 @@ reach 3 wins the game
 //prompt the user for input
 const playerChoice = prompt("Please choose one: Rock, Paper, Scissors").toLowerCase;
 //saved the return value for the computer choice in a variable to be used when calling oneRound function
-const computerChoice = getComputerChoice();
+let computerChoice = getComputerChoice();
 //function to get the computer input randomly
 
 function getComputerChoice(){
@@ -62,7 +62,6 @@ function oneRound(playerSelection, computerSelection){
         console.log(`Computer Choice: ${computerChoice}`)
         return "You Win! Scissors beats Paper";
     }else{
-        console.log(`Computer Choice: ${computerChoice}`)
         return "Draw!";
     }
 }
