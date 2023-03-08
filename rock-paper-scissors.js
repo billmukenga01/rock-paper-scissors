@@ -105,11 +105,13 @@ function game(){
 
         //reset value for next function call
         userWins = 0;
+        computerWins = 0;
     
     }else{
         console.log("Computer Wins Game!")
 
         //reset value for next function call
+        userWins = 0;
         computerWins = 0;
     }
 }
