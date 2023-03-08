@@ -90,7 +90,7 @@ function game(){
     }
 //check who wins the 5 rounds
     if (userWins === computerWins){
-        console.log("Draw!")
+        console.log("Draw Game!")
 
     }else if(userWins > computerWins){
         console.log("You Win Game!")
