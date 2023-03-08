@@ -32,12 +32,7 @@ function getComputerChoice(){
 
 //function to get play a round of the game
 
-function singleRound(playerSelection, computerSelection){
-    //call the getComputerChoice function and store the return value in the variable computerSelection
-    const computerSelection = getComputerChoice();
-    //prompt the user for input and convert it to all lowercase 
-    const playerSelection = prompt("Please choose :Rock, Paper, Scissors").toLowerCase();
-
-
-
+function oneRound(playerSelection, computerSelection){
+    
 }
+
