@@ -22,8 +22,10 @@ let computerWins = 0;
 
 //function expression to prompt the user for input
 const playerChoice = function(){
+    //prompt the user for input
     return prompt("Please choose one: Rock, Paper, Scissors").toLowerCase();
 }
+
 //function expression to save the value of the function that generates the rock, paper, or scissors randomly
 const computerChoice = function getComputerChoice(){
     //use a math.floor and math.random function to genetate a number in the range of 1 and 3
@@ -38,17 +40,14 @@ const computerChoice = function getComputerChoice(){
     }
 }
 
-
-
-
-
 //function to get play a round of the game
 
 function oneRound(playerPlay, computerPlay){
-    //these varables have to be in the oneround function so as to prevent one value being used in the entire loop
+    //these variables have to be in the oneround function so as to prevent one value being used in the entire loop over and over
     const playerSelection = playerPlay();
     const computerSelection = computerPlay();
 
+    //check to see who wins round and increment either userWins orcomputerWins and return a string value
     if(playerSelection === 'rock' && computerSelection === 'rock'){
         console.log(`Computer Choice: ${computerSelection}`)
         return "Draw!";
@@ -94,10 +93,10 @@ function game(){
         console.log("Draw!")
 
     }else if(userWins > computerWins){
-        console.log("You Win!")
+        console.log("You Win Game!")
     
     }else{
-        console.log("Computer Wins!")
+        console.log("Computer Wins Game!")
     }
 }
 game();
