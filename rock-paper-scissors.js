@@ -16,7 +16,7 @@ reach 3 wins the game
 //else continue playing
 
 //prompt the user for input
-const playerChoice = prompt("Please choose one: Rock, Paper, Scissors").toLowerCase;
+const playerChoice = prompt("Please choose one: Rock, Paper, Scissors").toLowerCase();
 //saved the return value for the computer choice in a variable to be used when calling oneRound function
 let computerChoice = getComputerChoice();
 //function to get the computer input randomly
