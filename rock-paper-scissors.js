@@ -20,7 +20,7 @@ else continue playing*/
 let userWins = 0;
 let computerWins = 0; 
 
-//function to prompt the user for input
+//function expression to prompt the user for input
 const playerChoice = function(){
     return prompt("Please choose one: Rock, Paper, Scissors").toLowerCase();
 }
