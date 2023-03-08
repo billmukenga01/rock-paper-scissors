@@ -15,6 +15,8 @@ reach 3 wins the game
 // else if computerWins is equal to 3 exit game and console.log winner
 //else continue playing
 
+//prompt the user for input
+const playerSelection = prompt("Please choose one: Rock, Paper, Scissors");
 //function to get the computer input randomly
 
 function getComputerChoice(){
@@ -35,4 +37,5 @@ function getComputerChoice(){
 function oneRound(playerSelection, computerSelection){
     
 }
+
 
