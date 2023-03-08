@@ -44,8 +44,8 @@ let computerWins;
 //function to get play a round of the game
 
 function oneRound(playerSelection, computerPlay){
-
-    let computerSelection = computerPlay();
+    const playerSelection = playerChoice();
+    const computerSelection = computerPlay();
 
     if(playerSelection === 'rock' && computerSelection === 'rock'){
         console.log(`Computer Choice: ${computerSelection}`)
