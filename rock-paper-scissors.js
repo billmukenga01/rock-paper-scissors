@@ -16,9 +16,9 @@ reach 3 wins the game
 //else continue playing
 
 //prompt the user for input
-const playerSelection = prompt("Please choose one: Rock, Paper, Scissors").toLowerCase;
+const playerChoice = prompt("Please choose one: Rock, Paper, Scissors").toLowerCase;
 //saved the return value for the computer choice in a variable to be used when calling oneRound function
-const computerSelection = getComputerChoice();
+const computerChoice = getComputerChoice();
 //function to get the computer input randomly
 
 function getComputerChoice(){
@@ -38,27 +38,27 @@ function getComputerChoice(){
 
 function oneRound(playerSelection, computerSelection){
     if(playerSelection === 'rock' && computerSelection === 'rock'){
-
+        return "You Lose! Paper beats Rock";
     }else if(playerSelection === 'rock' && computerSelection === 'paper'){
-
+        return "You Lose! Paper beats Rock";
     }else if(playerSelection === 'rock' && computerSelection === 'scissors'){
-
+        return "You Lose! Paper beats Rock";
     }else if(playerSelection === 'paper' && computerSelection === 'rock'){
-
+        return "You Lose! Paper beats Rock";
     }else if(playerSelection === 'paper' && computerSelection === 'paper'){
-
+        return "You Lose! Paper beats Rock";
     }else if(playerSelection === 'paper' && computerSelection === 'scissors'){
-
+        return "You Lose! Paper beats Rock";
     }else if(playerSelection === 'scissors' && computerSelection === 'rock'){
-
+        return "You Lose! Paper beats Rock";
     }else if(playerSelection === 'scissors' && computerSelection === 'paper'){
-
+        return "You Lose! Paper beats Rock";
     }else{
-
+        return "You Lose! Paper beats Rock";
     }
 
 
 
 }
 
-
+oneRound(playerChoice, computerChoice);
