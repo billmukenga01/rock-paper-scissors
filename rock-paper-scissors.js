@@ -46,7 +46,8 @@ const computerChoice = function getComputerChoice(){
 
 function oneRound(playerPlay, computerPlay){
 
-    //these variables have to be in the oneround function so as to prevent one value being used in the entire loop over and over
+    /*these variables have to be in the oneround function so as to prevent 
+    one value being used in the entire loop over and over*/
     const playerSelection = playerPlay();
     const computerSelection = computerPlay();
 
