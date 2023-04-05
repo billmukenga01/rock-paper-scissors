@@ -74,21 +74,21 @@ function oneRound(playerPlay, computerPlay){
         // check who wins the 5 rounds
         if (userWins === computerWins){
             newDiv3.textContent = "Draw Game!"
-    
+            newDiv3.textContent = '';
             //reset values for next function call
             userWins = 0;
             computerWins = 0;
     
         }else if(userWins > computerWins){
             newDiv3.textContent = "You Win Game!"
-    
+            newDiv3.textContent = '';
             //reset value for next function call
             userWins = 0;
             computerWins = 0;
         
         }else{
             newDiv3.textContent = "Computer Wins Game!"
-    
+            newDiv3.textContent = '';
             //reset value for next function call
             userWins = 0;
             computerWins = 0;
