@@ -94,6 +94,39 @@ function oneRound(playerPlay, computerPlay){
         newDiv2.textContent = `Computer Choice: ${computerSelection}`
         newDiv.textContent =  "Draw!";
     }
+
+    //check the first to 5 points
+
+    if (userWins === 5 || computerWins === 5){
+
+        // check who wins the 5 rounds
+        if (userWins === computerWins){
+            console.log("Draw Game!")
+    
+            //reset values for next function call
+            userWins = 0;
+            computerWins = 0;
+    
+        }else if(userWins > computerWins){
+            console.log("You Win Game!")
+    
+            //reset value for next function call
+            userWins = 0;
+            computerWins = 0;
+        
+        }else{
+            console.log("Computer Wins Game!")
+    
+            //reset value for next function call
+            userWins = 0;
+            computerWins = 0;
+        }
+    }else if(userWins > 5 || computerWins > 5){
+        //reset value for next function call
+
+        userWins = 0;
+        computerWins = 0;
+    }
 }
 
 
@@ -103,10 +136,10 @@ function oneRound(playerPlay, computerPlay){
 // create function game to play 5 rounds
 
 // function game(){
-//     // for (let i = 0; i < 5; i++) {
-//     //     const result = oneRound(playerChoice, computerChoice);
-//     //     console.log(result);
-//     // }
+//     for (let i = 0; i < 5; i++) {
+//         const result = oneRound(playerChoice, computerChoice);
+//         console.log(result);
+//     }
 
 //     //check who wins the 5 rounds
 //     if (userWins === computerWins){
@@ -156,32 +189,4 @@ scissors.textContent = 'Scissors';
 body.appendChild(newDiv2);
 body.appendChild(newDiv);
 
-
-
-
-if (userWins === 5 || computerWins === 5){
-
-    // check who wins the 5 rounds
-    if (userWins === computerWins){
-        console.log("Draw Game!")
-
-        //reset values for next function call
-        userWins = 0;
-        computerWins = 0;
-
-    }else if(userWins > computerWins){
-        console.log("You Win Game!")
-
-        //reset value for next function call
-        userWins = 0;
-        computerWins = 0;
-    
-    }else{
-        console.log("Computer Wins Game!")
-
-        //reset value for next function call
-        userWins = 0;
-        computerWins = 0;
-    }
-}
 // game();
