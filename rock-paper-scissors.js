@@ -42,11 +42,11 @@ const computerChoice = function getComputerChoice(){
 
     //use a conditional to map each number to a specific string 
     if (randomNumber === 1){
-        return 'rock'; 
+        return 'Rock'; 
     }else if(randomNumber === 2){
-        return 'paper';
+        return 'Paper';
     }else{
-        return 'scissors';
+        return 'Scissors';
     }
 }
 
