@@ -21,6 +21,9 @@ with the most at the end  of 5 games wins
 const rock = document.querySelector('#rock');
 const paper = document.querySelector('#paper');
 const scissors = document.querySelector('#scissors');
+const body = document.querySelector('body');
+const newDiv = document.createElement('div');
+
 let userWins = 0;
 let computerWins = 0; 
 
@@ -142,5 +145,8 @@ scissors.addEventListener('click', e =>{
     playerChoice = 'scissors';
     oneRound(playerChoice, computerChoice);
 });
+
+
+body.appendChild(newDiv);
 
 // game();
