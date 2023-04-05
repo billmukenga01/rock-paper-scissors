@@ -16,26 +16,24 @@ with the most at the end  of 5 games wins
 
 
 
-//variables to save user wins and computer wins
 
-const rock = document.querySelector('#rock');
-const paper = document.querySelector('#paper');
-const scissors = document.querySelector('#scissors');
+const start = document.querySelector('#start-button');
 const body = document.querySelector('body');
+
+const rock = document.createElement('button');
+const paper = document.createElement('button');
+const scissors = document.createElement('button');
+const reset = document.createElement('button');
 const newDiv = document.createElement('div');
 const newDiv2 = document.createElement('div');
 const newDiv3 = document.createElement('div');
 
-
-
+//variables to save user wins and computer wins
 let userWins = 0;
 let computerWins = 0; 
 
-//function expression to prompt the user for input
-let playerChoice = function(){
-    //prompt the user for input
-    return prompt("Please choose one: Rock, Paper, Scissors").toLowerCase();
-}
+//player Choice variable
+let playerChoice = ' ';
 
 //function expression to save the value of the function that generates the rock, paper, or scissors randomly
 const computerChoice = function getComputerChoice(){
@@ -51,13 +49,11 @@ const computerChoice = function getComputerChoice(){
     }else{
         return 'scissors';
     }
-}
+};
+
+//append the 3 new divs
 
 
-
-body.appendChild(newDiv2);
-body.appendChild(newDiv);
-body.appendChild(newDiv3);
 //function to get play a round of the game
 
 function oneRound(playerPlay, computerPlay){
@@ -74,21 +70,38 @@ function oneRound(playerPlay, computerPlay){
         // check who wins the 5 rounds
         if (userWins === computerWins){
             newDiv3.textContent = "Draw Game!"
-    
+            body.appendChild(reset);
             //reset values for next function call
             userWins = 0;
             computerWins = 0;
     
         }else if(userWins > computerWins){
             newDiv3.textContent = "You Win Game!"
-    
+            body.appendChild(reset);
+            reset.style.display = 'inline';
+
+            body.removeChild(rock);
+            body.removeChild(paper);
+            body.removeChild(scissors);
+
+            newDiv.textContent = ' '
+            newDiv2.textContent = ' '
             //reset value for next function call
             userWins = 0;
             computerWins = 0;
         
         }else{
             newDiv3.textContent = "Computer Wins Game!"
-    
+            body.appendChild(reset);
+            reset.style.display = 'inline';
+
+
+            body.removeChild(rock);
+            body.removeChild(paper);
+            body.removeChild(scissors);
+
+            newDiv.textContent = ' '
+            newDiv2.textContent = ' '
             //reset value for next function call
             userWins = 0;
             computerWins = 0;
@@ -136,6 +149,29 @@ function oneRound(playerPlay, computerPlay){
 
 // code to get input from 3 buttons on the ui
 
+start.addEventListener('click', e =>{
+    body.appendChild(rock)
+    body.appendChild(paper)
+    body.appendChild(scissors)
+    body.appendChild(newDiv2);
+    body.appendChild(newDiv);
+    body.appendChild(newDiv3);
+
+    
+    
+
+    start.style.display = 'none';
+});
+
+
+reset.addEventListener('click',e =>{
+    newDiv3.textContent = " ";
+    
+    reset.style.display = 'none';
+
+    start.style.display = 'inline';
+});
+
 rock.addEventListener('click', e =>{
     playerChoice = 'rock';
     oneRound(playerChoice, computerChoice);
@@ -153,6 +189,7 @@ scissors.addEventListener('click', e =>{
 rock.textContent = 'Rock';
 paper.textContent = 'Paper';
 scissors.textContent = 'Scissors';
+reset.textContent = 'Reset';
 
 
 // game();
