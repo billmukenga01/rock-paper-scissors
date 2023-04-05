@@ -93,35 +93,35 @@ function oneRound(playerPlay, computerPlay){
 
 // create function game to play 5 rounds
 
-function game(){
-    // for (let i = 0; i < 5; i++) {
-    //     const result = oneRound(playerChoice, computerChoice);
-    //     console.log(result);
-    // }
+// function game(){
+//     // for (let i = 0; i < 5; i++) {
+//     //     const result = oneRound(playerChoice, computerChoice);
+//     //     console.log(result);
+//     // }
 
-    //check who wins the 5 rounds
-    if (userWins === computerWins){
-        console.log("Draw Game!")
+//     //check who wins the 5 rounds
+//     if (userWins === computerWins){
+//         console.log("Draw Game!")
 
-        //reset values for next function call
-        userWins = 0;
-        computerWins = 0;
+//         //reset values for next function call
+//         userWins = 0;
+//         computerWins = 0;
 
-    }else if(userWins > computerWins){
-        console.log("You Win Game!")
+//     }else if(userWins > computerWins){
+//         console.log("You Win Game!")
 
-        //reset value for next function call
-        userWins = 0;
-        computerWins = 0;
+//         //reset value for next function call
+//         userWins = 0;
+//         computerWins = 0;
     
-    }else{
-        console.log("Computer Wins Game!")
+//     }else{
+//         console.log("Computer Wins Game!")
 
-        //reset value for next function call
-        userWins = 0;
-        computerWins = 0;
-    }
-}
+//         //reset value for next function call
+//         userWins = 0;
+//         computerWins = 0;
+//     }
+// }
 
 
 // code to get input from 3 buttons on the ui
@@ -143,4 +143,4 @@ scissors.addEventListener('click', e =>{
     oneRound(playerChoice, computerChoice);
 });
 
-game();
+// game();
