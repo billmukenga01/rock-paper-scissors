@@ -61,7 +61,47 @@ function oneRound(playerPlay, computerPlay){
 
     //check the first to 5 points
 
-    if (userWins === 5 || computerWins === 5){
+    if(userWins < 5 || computerWins < 5){
+        
+        //check to see who wins round and increment either userWins or computerWins and return a string value
+
+
+        if(playerSelection === 'rock' && computerSelection === 'rock'){
+        newDiv2.textContent = `Computer Choice: ${computerSelection}`
+        newDiv.textContent =  "Draw!";
+        }else if(playerSelection === 'rock' && computerSelection === 'paper'){
+        newDiv2.textContent = `Computer Choice: ${computerSelection}`
+        computerWins += 1;
+        newDiv.textContent =  "You Lose! Paper beats Rock";
+        }else if(playerSelection === 'rock' && computerSelection === 'scissors'){
+        newDiv2.textContent = `Computer Choice: ${computerSelection}`
+        userWins +=1;
+        newDiv.textContent =  "You Win! Rock beats Scissors";
+        }else if(playerSelection === 'paper' && computerSelection === 'rock'){
+        newDiv2.textContent = `Computer Choice: ${computerSelection}`
+        userWins +=1;
+        newDiv.textContent =  "You Win! Paper beats Rock";
+        }else if(playerSelection === 'paper' && computerSelection === 'paper'){
+        newDiv2.textContent = `Computer Choice: ${computerSelection}`
+        newDiv.textContent =  "Draw!";
+        }else if(playerSelection === 'paper' && computerSelection === 'scissors'){
+        newDiv2.textContent = `Computer Choice: ${computerSelection}`
+        computerWins += 1;
+        newDiv.textContent =  "You Lose! Scissors beats Paper";
+        }else if(playerSelection === 'scissors' && computerSelection === 'rock'){
+        newDiv2.textContent = `Computer Choice: ${computerSelection}`
+        computerWins += 1;
+        newDiv.textContent =  "You Lose! Rock beats scissors";
+        }else if(playerSelection === 'scissors' && computerSelection === 'paper'){
+        newDiv2.textContent = `Computer Choice: ${computerSelection}`
+        userWins +=1;
+        newDiv.textContent =  "You Win! Scissors beats Paper";
+        }else{
+        newDiv2.textContent = `Computer Choice: ${computerSelection}`
+        newDiv.textContent =  "Draw!";
+        }
+    }
+    else if (userWins === 5 || computerWins === 5){
 
         // check who wins the 5 rounds
         if (userWins === computerWins){
@@ -92,41 +132,7 @@ function oneRound(playerPlay, computerPlay){
         computerWins = 0;
     }
 
-    //check to see who wins round and increment either userWins or computerWins and return a string value
-    if(playerSelection === 'rock' && computerSelection === 'rock'){
-        newDiv2.textContent = `Computer Choice: ${computerSelection}`
-        newDiv.textContent =  "Draw!";
-    }else if(playerSelection === 'rock' && computerSelection === 'paper'){
-        newDiv2.textContent = `Computer Choice: ${computerSelection}`
-        computerWins += 1;
-        newDiv.textContent =  "You Lose! Paper beats Rock";
-    }else if(playerSelection === 'rock' && computerSelection === 'scissors'){
-        newDiv2.textContent = `Computer Choice: ${computerSelection}`
-        userWins +=1;
-        newDiv.textContent =  "You Win! Rock beats Scissors";
-    }else if(playerSelection === 'paper' && computerSelection === 'rock'){
-        newDiv2.textContent = `Computer Choice: ${computerSelection}`
-        userWins +=1;
-        newDiv.textContent =  "You Win! Paper beats Rock";
-    }else if(playerSelection === 'paper' && computerSelection === 'paper'){
-        newDiv2.textContent = `Computer Choice: ${computerSelection}`
-        newDiv.textContent =  "Draw!";
-    }else if(playerSelection === 'paper' && computerSelection === 'scissors'){
-        newDiv2.textContent = `Computer Choice: ${computerSelection}`
-        computerWins += 1;
-        newDiv.textContent =  "You Lose! Scissors beats Paper";
-    }else if(playerSelection === 'scissors' && computerSelection === 'rock'){
-        newDiv2.textContent = `Computer Choice: ${computerSelection}`
-        computerWins += 1;
-        newDiv.textContent =  "You Lose! Rock beats scissors";
-    }else if(playerSelection === 'scissors' && computerSelection === 'paper'){
-        newDiv2.textContent = `Computer Choice: ${computerSelection}`
-        userWins +=1;
-        newDiv.textContent =  "You Win! Scissors beats Paper";
-    }else{
-        newDiv2.textContent = `Computer Choice: ${computerSelection}`
-        newDiv.textContent =  "Draw!";
-    }
+    
 
 }
 
