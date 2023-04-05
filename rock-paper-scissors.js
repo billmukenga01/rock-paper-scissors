@@ -156,4 +156,32 @@ scissors.textContent = 'Scissors';
 body.appendChild(newDiv2);
 body.appendChild(newDiv);
 
+
+
+
+if (userWins <=5 || computerWins <= 5){
+    
+    // check who wins the 5 rounds
+    if (userWins === computerWins){
+        console.log("Draw Game!")
+
+        //reset values for next function call
+        userWins = 0;
+        computerWins = 0;
+
+    }else if(userWins > computerWins){
+        console.log("You Win Game!")
+
+        //reset value for next function call
+        userWins = 0;
+        computerWins = 0;
+    
+    }else{
+        console.log("Computer Wins Game!")
+
+        //reset value for next function call
+        userWins = 0;
+        computerWins = 0;
+    }
+}
 // game();
