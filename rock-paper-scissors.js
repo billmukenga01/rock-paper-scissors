@@ -24,6 +24,9 @@ const scissors = document.querySelector('#scissors');
 const body = document.querySelector('body');
 const newDiv = document.createElement('div');
 const newDiv2 = document.createElement('div');
+const newDiv3 = document.createElement('div');
+
+
 
 let userWins = 0;
 let computerWins = 0; 
@@ -50,6 +53,11 @@ const computerChoice = function getComputerChoice(){
     }
 }
 
+
+
+body.appendChild(newDiv2);
+body.appendChild(newDiv);
+body.appendChild(newDiv3);
 //function to get play a round of the game
 
 function oneRound(playerPlay, computerPlay){
@@ -65,21 +73,21 @@ function oneRound(playerPlay, computerPlay){
 
         // check who wins the 5 rounds
         if (userWins === computerWins){
-            console.log("Draw Game!")
+            newDiv3.textContent = "Draw Game!"
     
             //reset values for next function call
             userWins = 0;
             computerWins = 0;
     
         }else if(userWins > computerWins){
-            console.log("You Win Game!")
+            newDiv3.textContent = "You Win Game!"
     
             //reset value for next function call
             userWins = 0;
             computerWins = 0;
         
         }else{
-            console.log("Computer Wins Game!")
+            newDiv3.textContent = "Computer Wins Game!"
     
             //reset value for next function call
             userWins = 0;
@@ -185,7 +193,5 @@ rock.textContent = 'Rock';
 paper.textContent = 'Paper';
 scissors.textContent = 'Scissors';
 
-body.appendChild(newDiv2);
-body.appendChild(newDiv);
 
 // game();
