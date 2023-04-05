@@ -159,8 +159,8 @@ body.appendChild(newDiv);
 
 
 
-if (userWins <=5 || computerWins <= 5){
-    
+if (userWins === 5 || computerWins === 5){
+
     // check who wins the 5 rounds
     if (userWins === computerWins){
         console.log("Draw Game!")
