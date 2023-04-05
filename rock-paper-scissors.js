@@ -17,6 +17,10 @@ with the most at the end  of 5 games wins
 
 
 //variables to save user wins and computer wins
+
+const rock = document.querySelector('#rock');
+const paper = document.querySelector('#paper');
+const scissors = document.querySelector('#scissors');
 let userWins = 0;
 let computerWins = 0; 
 
@@ -125,10 +129,6 @@ function oneRound(playerPlay, computerPlay){
 
 
 // code to get input from 3 buttons on the ui
-const rock = document.querySelector('#rock');
-const paper = document.querySelector('#paper');
-const scissors = document.querySelector('#scissors');
-
 
 rock.addEventListener('click', e =>{
     playerChoice = 'rock';
