@@ -59,6 +59,39 @@ function oneRound(playerPlay, computerPlay){
     const playerSelection = playerChoice;
     const computerSelection = computerPlay();
 
+    //check the first to 5 points
+
+    if (userWins === 5 || computerWins === 5){
+
+        // check who wins the 5 rounds
+        if (userWins === computerWins){
+            console.log("Draw Game!")
+    
+            //reset values for next function call
+            userWins = 0;
+            computerWins = 0;
+    
+        }else if(userWins > computerWins){
+            console.log("You Win Game!")
+    
+            //reset value for next function call
+            userWins = 0;
+            computerWins = 0;
+        
+        }else{
+            console.log("Computer Wins Game!")
+    
+            //reset value for next function call
+            userWins = 0;
+            computerWins = 0;
+        }
+    }else if(userWins > 5 || computerWins > 5){
+        //reset value for next function call
+
+        userWins = 0;
+        computerWins = 0;
+    }
+
     //check to see who wins round and increment either userWins or computerWins and return a string value
     if(playerSelection === 'rock' && computerSelection === 'rock'){
         newDiv2.textContent = `Computer Choice: ${computerSelection}`
@@ -95,38 +128,6 @@ function oneRound(playerPlay, computerPlay){
         newDiv.textContent =  "Draw!";
     }
 
-    //check the first to 5 points
-
-    if (userWins === 5 || computerWins === 5){
-
-        // check who wins the 5 rounds
-        if (userWins === computerWins){
-            console.log("Draw Game!")
-    
-            //reset values for next function call
-            userWins = 0;
-            computerWins = 0;
-    
-        }else if(userWins > computerWins){
-            console.log("You Win Game!")
-    
-            //reset value for next function call
-            userWins = 0;
-            computerWins = 0;
-        
-        }else{
-            console.log("Computer Wins Game!")
-    
-            //reset value for next function call
-            userWins = 0;
-            computerWins = 0;
-        }
-    }else if(userWins > 5 || computerWins > 5){
-        //reset value for next function call
-
-        userWins = 0;
-        computerWins = 0;
-    }
 }
 
 
