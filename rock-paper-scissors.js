@@ -125,13 +125,7 @@ function oneRound(playerPlay, computerPlay){
             userWins = 0;
             computerWins = 0;
         }
-    }else if(userWins > 5 || computerWins > 5){
-        //reset value for next function call
-
-        userWins = 0;
-        computerWins = 0;
     }
-
     
 
 }
