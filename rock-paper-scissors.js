@@ -21,7 +21,7 @@ let userWins = 0;
 let computerWins = 0; 
 
 //function expression to prompt the user for input
-const playerChoice = function(){
+let playerChoice = function(){
     //prompt the user for input
     return prompt("Please choose one: Rock, Paper, Scissors").toLowerCase();
 }
@@ -89,37 +89,58 @@ function oneRound(playerPlay, computerPlay){
 
 
 
-oneRound(playerChoice, computerChoice);
 
-//create function game to play 5 rounds
 
-// function game(){
-//     for (let i = 0; i < 5; i++) {
-//         const result = oneRound(playerChoice, computerChoice);
-//         console.log(result);
-//     }
+// create function game to play 5 rounds
 
-//     //check who wins the 5 rounds
-//     if (userWins === computerWins){
-//         console.log("Draw Game!")
+function game(){
+    // for (let i = 0; i < 5; i++) {
+    //     const result = oneRound(playerChoice, computerChoice);
+    //     console.log(result);
+    // }
 
-//         //reset values for next function call
-//         userWins = 0;
-//         computerWins = 0;
+    //check who wins the 5 rounds
+    if (userWins === computerWins){
+        console.log("Draw Game!")
 
-//     }else if(userWins > computerWins){
-//         console.log("You Win Game!")
+        //reset values for next function call
+        userWins = 0;
+        computerWins = 0;
 
-//         //reset value for next function call
-//         userWins = 0;
-//         computerWins = 0;
+    }else if(userWins > computerWins){
+        console.log("You Win Game!")
+
+        //reset value for next function call
+        userWins = 0;
+        computerWins = 0;
     
-//     }else{
-//         console.log("Computer Wins Game!")
+    }else{
+        console.log("Computer Wins Game!")
 
-//         //reset value for next function call
-//         userWins = 0;
-//         computerWins = 0;
-//     }
-// }
-// game();
+        //reset value for next function call
+        userWins = 0;
+        computerWins = 0;
+    }
+}
+
+
+// code to get input from 3 buttons on the ui
+const rock = document.querySelector('#rock');
+const paper = document.querySelector('#paper');
+const scissors = document.querySelector('#scissors');
+
+
+rock.addEventListener('click', e =>{
+    playerChoice = 'rock';
+    oneRound(playerChoice, computerChoice);
+});
+paper.addEventListener('click', e =>{
+    playerChoice = 'paper';
+    oneRound(playerChoice, computerChoice);
+});
+scissors.addEventListener('click', e =>{
+    playerChoice = 'scissors';
+    oneRound(playerChoice, computerChoice);
+});
+
+game();
