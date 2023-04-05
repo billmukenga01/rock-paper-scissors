@@ -61,36 +61,36 @@ function oneRound(playerPlay, computerPlay){
     //check to see who wins round and increment either userWins or computerWins and return a string value
     if(playerSelection === 'rock' && computerSelection === 'rock'){
         console.log(`Computer Choice: ${computerSelection}`)
-        return "Draw!";
+        newDiv.textContent =  "Draw!";
     }else if(playerSelection === 'rock' && computerSelection === 'paper'){
         console.log(`Computer Choice: ${computerSelection}`)
         computerWins += 1;
-        return "You Lose! Paper beats Rock";
+        newDiv.textContent =  "You Lose! Paper beats Rock";
     }else if(playerSelection === 'rock' && computerSelection === 'scissors'){
         console.log(`Computer Choice: ${computerSelection}`)
         userWins +=1;
-        return "You Win! Rock beats Scissors";
+        newDiv.textContent =  "You Win! Rock beats Scissors";
     }else if(playerSelection === 'paper' && computerSelection === 'rock'){
         console.log(`Computer Choice: ${computerSelection}`)
         userWins +=1;
-        return "You Win! Paper beats Rock";
+        newDiv.textContent =  "You Win! Paper beats Rock";
     }else if(playerSelection === 'paper' && computerSelection === 'paper'){
         console.log(`Computer Choice: ${computerSelection}`)
-        return "Draw!";
+        newDiv.textContent =  "Draw!";
     }else if(playerSelection === 'paper' && computerSelection === 'scissors'){
         console.log(`Computer Choice: ${computerSelection}`)
         computerWins += 1;
-        return "You Lose! Scissors beats Paper";
+        newDiv.textContent =  "You Lose! Scissors beats Paper";
     }else if(playerSelection === 'scissors' && computerSelection === 'rock'){
         console.log(`Computer Choice: ${computerSelection}`)
         computerWins += 1;
-        return "You Lose! Rock beats scissors";
+        newDiv.textContent =  "You Lose! Rock beats scissors";
     }else if(playerSelection === 'scissors' && computerSelection === 'paper'){
         console.log(`Computer Choice: ${computerSelection}`)
         userWins +=1;
-        return "You Win! Scissors beats Paper";
+        newDiv.textContent =  "You Win! Scissors beats Paper";
     }else{
-        return "Draw!";
+        newDiv.textContent =  "Draw!";
     }
 }
 
