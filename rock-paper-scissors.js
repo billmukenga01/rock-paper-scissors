@@ -189,7 +189,7 @@ scissors.addEventListener('click', e =>{
 rock.textContent = 'Rock';
 paper.textContent = 'Paper';
 scissors.textContent = 'Scissors';
-reset.textContent = 'Reset';
+reset.textContent = 'Reset Game';
 
 
 // game();
