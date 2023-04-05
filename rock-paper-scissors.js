@@ -27,6 +27,8 @@ const reset = document.createElement('button');
 const newDiv = document.createElement('div');
 const newDiv2 = document.createElement('div');
 const newDiv3 = document.createElement('div');
+const userPoints = document.createElement('div');
+const computerPoints = document.createElement('div');
 
 //variables to save user wins and computer wins
 let userWins = 0;
@@ -156,6 +158,9 @@ start.addEventListener('click', e =>{
     body.appendChild(newDiv2);
     body.appendChild(newDiv);
     body.appendChild(newDiv3);
+    body.appendChild(userPoints);
+    body.appendChild(computerPoints);
+    
 
     
     start.style.display = 'none';
@@ -164,6 +169,8 @@ start.addEventListener('click', e =>{
 
 reset.addEventListener('click',e =>{
     newDiv3.textContent = " ";
+    userPoints.textContent = " ";
+    computerPoints.textContent = " ";
     
     reset.style.display = 'none';
 
@@ -172,14 +179,20 @@ reset.addEventListener('click',e =>{
 
 rock.addEventListener('click', e =>{
     playerChoice = 'rock';
+    userPoints.textContent = `User Wins:${userWins}`;
+    computerPoints.textContent = `Computer Wins:${computerWins}`;
     oneRound(playerChoice, computerChoice);
 });
 paper.addEventListener('click', e =>{
     playerChoice = 'paper';
+    userPoints.textContent = `User Wins:${userWins}`;
+    computerPoints.textContent = `Computer Wins:${computerWins}`;
     oneRound(playerChoice, computerChoice);
 });
 scissors.addEventListener('click', e =>{
     playerChoice = 'scissors';
+    userPoints.textContent = `User Wins:${userWins}`;
+    computerPoints.textContent = `Computer Wins:${computerWins}`;
     oneRound(playerChoice, computerChoice);
 });
 
