@@ -74,8 +74,7 @@ function oneRound(playerPlay, computerPlay){
             newDiv3.textContent = "Draw Game!"
             body.appendChild(reset);
             //reset values for next function call
-            userWins = 0;
-            computerWins = 0;
+            
     
         }else if(userWins > computerWins){
             newDiv3.textContent = "You Win Game!"
@@ -89,8 +88,7 @@ function oneRound(playerPlay, computerPlay){
             newDiv.textContent = ' '
             newDiv2.textContent = ' '
             //reset value for next function call
-            userWins = 0;
-            computerWins = 0;
+            
         
         }else{
             newDiv3.textContent = "Computer Wins Game!"
@@ -105,8 +103,7 @@ function oneRound(playerPlay, computerPlay){
             newDiv.textContent = ' '
             newDiv2.textContent = ' '
             //reset value for next function call
-            userWins = 0;
-            computerWins = 0;
+            
         }
     }else{
         //check to see who wins round and increment either userWins or computerWins and return a string value
@@ -116,30 +113,30 @@ function oneRound(playerPlay, computerPlay){
             newDiv.textContent =  "Draw!";
         }else if(playerSelection === 'rock' && computerSelection === 'paper'){
             newDiv2.textContent = `Computer Choice: ${computerSelection}`
-            computerWins += 1;
+            ++ computerWins ;
             newDiv.textContent =  "You Lose! Paper beats Rock";
         }else if(playerSelection === 'rock' && computerSelection === 'scissors'){
             newDiv2.textContent = `Computer Choice: ${computerSelection}`
-            userWins +=1;
+            ++ userWins;
             newDiv.textContent =  "You Win! Rock beats Scissors";
         }else if(playerSelection === 'paper' && computerSelection === 'rock'){
             newDiv2.textContent = `Computer Choice: ${computerSelection}`
-            userWins +=1;
+            ++ userWins;
             newDiv.textContent =  "You Win! Paper beats Rock";
         }else if(playerSelection === 'paper' && computerSelection === 'paper'){
             newDiv2.textContent = `Computer Choice: ${computerSelection}`
             newDiv.textContent =  "Draw!";
         }else if(playerSelection === 'paper' && computerSelection === 'scissors'){
             newDiv2.textContent = `Computer Choice: ${computerSelection}`
-            computerWins += 1;
+            ++ computerWins ;
             newDiv.textContent =  "You Lose! Scissors beats Paper";
         }else if(playerSelection === 'scissors' && computerSelection === 'rock'){
             newDiv2.textContent = `Computer Choice: ${computerSelection}`
-            computerWins += 1;
+            ++ computerWins ;
             newDiv.textContent =  "You Lose! Rock beats scissors";
         }else if(playerSelection === 'scissors' && computerSelection === 'paper'){
             newDiv2.textContent = `Computer Choice: ${computerSelection}`
-            userWins +=1;
+            ++ userWins;
             newDiv.textContent =  "You Win! Scissors beats Paper";
         }else{
             newDiv2.textContent = `Computer Choice: ${computerSelection}`
@@ -175,25 +172,31 @@ reset.addEventListener('click',e =>{
     reset.style.display = 'none';
 
     start.style.display = 'inline';
+
+    userWins = 0;
+    computerWins = 0;
 });
 
 rock.addEventListener('click', e =>{
     playerChoice = 'rock';
+    oneRound(playerChoice, computerChoice);
     userPoints.textContent = `User Wins:${userWins}`;
     computerPoints.textContent = `Computer Wins:${computerWins}`;
-    oneRound(playerChoice, computerChoice);
+    
 });
 paper.addEventListener('click', e =>{
     playerChoice = 'paper';
+    oneRound(playerChoice, computerChoice);
     userPoints.textContent = `User Wins:${userWins}`;
     computerPoints.textContent = `Computer Wins:${computerWins}`;
-    oneRound(playerChoice, computerChoice);
+    
 });
 scissors.addEventListener('click', e =>{
     playerChoice = 'scissors';
+    oneRound(playerChoice, computerChoice);
     userPoints.textContent = `User Wins:${userWins}`;
     computerPoints.textContent = `Computer Wins:${computerWins}`;
-    oneRound(playerChoice, computerChoice);
+    
 });
 
 //change the text content of rock paper scissors
