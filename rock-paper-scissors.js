@@ -23,6 +23,7 @@ const paper = document.querySelector('#paper');
 const scissors = document.querySelector('#scissors');
 const body = document.querySelector('body');
 const newDiv = document.createElement('div');
+const newDiv2 = document.createElement('div');
 
 let userWins = 0;
 let computerWins = 0; 
