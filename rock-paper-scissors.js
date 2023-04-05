@@ -86,34 +86,40 @@ function oneRound(playerPlay, computerPlay){
         return "Draw!";
     }
 }
+
+
+
+oneRound(playerChoice, computerChoice);
+
 //create function game to play 5 rounds
-function game(){
-    for (let i = 0; i < 5; i++) {
-        const result = oneRound(playerChoice, computerChoice);
-        console.log(result);
-    }
 
-    //check who wins the 5 rounds
-    if (userWins === computerWins){
-        console.log("Draw Game!")
+// function game(){
+//     for (let i = 0; i < 5; i++) {
+//         const result = oneRound(playerChoice, computerChoice);
+//         console.log(result);
+//     }
 
-        //reset values for next function call
-        userWins = 0;
-        computerWins = 0;
+//     //check who wins the 5 rounds
+//     if (userWins === computerWins){
+//         console.log("Draw Game!")
 
-    }else if(userWins > computerWins){
-        console.log("You Win Game!")
+//         //reset values for next function call
+//         userWins = 0;
+//         computerWins = 0;
 
-        //reset value for next function call
-        userWins = 0;
-        computerWins = 0;
+//     }else if(userWins > computerWins){
+//         console.log("You Win Game!")
+
+//         //reset value for next function call
+//         userWins = 0;
+//         computerWins = 0;
     
-    }else{
-        console.log("Computer Wins Game!")
+//     }else{
+//         console.log("Computer Wins Game!")
 
-        //reset value for next function call
-        userWins = 0;
-        computerWins = 0;
-    }
-}
-game();
+//         //reset value for next function call
+//         userWins = 0;
+//         computerWins = 0;
+//     }
+// }
+// game();
