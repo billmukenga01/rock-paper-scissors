@@ -147,7 +147,8 @@ scissors.addEventListener('click', e =>{
     oneRound(playerChoice, computerChoice);
 });
 
-
+body.appendChild(newDiv2);
 body.appendChild(newDiv);
+
 
 // game();
