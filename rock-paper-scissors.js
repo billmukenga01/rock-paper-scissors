@@ -74,21 +74,21 @@ function oneRound(playerPlay, computerPlay){
         // check who wins the 5 rounds
         if (userWins === computerWins){
             newDiv3.textContent = "Draw Game!"
-            newDiv3.textContent = '';
+    
             //reset values for next function call
             userWins = 0;
             computerWins = 0;
     
         }else if(userWins > computerWins){
             newDiv3.textContent = "You Win Game!"
-            newDiv3.textContent = '';
+    
             //reset value for next function call
             userWins = 0;
             computerWins = 0;
         
         }else{
             newDiv3.textContent = "Computer Wins Game!"
-            newDiv3.textContent = '';
+    
             //reset value for next function call
             userWins = 0;
             computerWins = 0;
@@ -130,48 +130,9 @@ function oneRound(playerPlay, computerPlay){
             newDiv2.textContent = `Computer Choice: ${computerSelection}`
             newDiv.textContent =  "Draw!";
         }
-    }
-
-    
+    }   
 
 }
-
-
-
-
-
-// create function game to play 5 rounds
-
-// function game(){
-//     for (let i = 0; i < 5; i++) {
-//         const result = oneRound(playerChoice, computerChoice);
-//         console.log(result);
-//     }
-
-//     //check who wins the 5 rounds
-//     if (userWins === computerWins){
-//         console.log("Draw Game!")
-
-//         //reset values for next function call
-//         userWins = 0;
-//         computerWins = 0;
-
-//     }else if(userWins > computerWins){
-//         console.log("You Win Game!")
-
-//         //reset value for next function call
-//         userWins = 0;
-//         computerWins = 0;
-    
-//     }else{
-//         console.log("Computer Wins Game!")
-
-//         //reset value for next function call
-//         userWins = 0;
-//         computerWins = 0;
-//     }
-// }
-
 
 // code to get input from 3 buttons on the ui
 
