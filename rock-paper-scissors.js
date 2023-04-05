@@ -158,8 +158,6 @@ start.addEventListener('click', e =>{
     body.appendChild(newDiv3);
 
     
-    
-
     start.style.display = 'none';
 });
 
