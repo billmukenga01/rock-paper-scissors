@@ -15,10 +15,10 @@ with the most at the end  of 5 games wins
 
 
 
-
+//new wlements to be appended
 
 const start = document.querySelector('#start-button');
-const body = document.querySelector('body');
+const div = document.querySelector('div');
 
 const rock = document.createElement('button');
 const paper = document.createElement('button');
@@ -34,7 +34,7 @@ const computerPoints = document.createElement('div');
 let userWins = 0;
 let computerWins = 0; 
 
-//player Choice variable
+//variable to save player choice from buttons
 let playerChoice = ' ';
 
 rock.textContent = 'Rock';
@@ -42,7 +42,7 @@ paper.textContent = 'Paper';
 scissors.textContent = 'Scissors';
 reset.textContent = 'Reset Game';
 
-//function expression to save the value of the function that generates the rock, paper, or scissors randomly
+
 const computerChoice = function getComputerChoice(){
 
     //use a math.floor and math.random function to genetate a number in the range of 1 and 3
@@ -58,7 +58,6 @@ const computerChoice = function getComputerChoice(){
     }
 };
 
-//append the 3 new divs
 
 
 //function to get play a round of the game
@@ -117,7 +116,7 @@ if (userWins > 4 || computerWins > 4){
     // check who wins the 5 rounds
     if (userWins === computerWins){
         newDiv3.textContent = "Draw Game!"
-        body.appendChild(reset);
+        .appendChild(reset);
         //reset values for next function call
         
 
