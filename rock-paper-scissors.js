@@ -111,56 +111,18 @@ function oneRound(playerPlay, computerPlay){
     }
 }
 
-if (userWins > 4 || computerWins > 4){
 
-    // check who wins the 5 rounds
-    if (userWins === computerWins){
-        newDiv3.textContent = "Draw Game!"
-        .appendChild(reset);
-        //reset values for next function call
-        
-
-    }else if(userWins > computerWins){
-        newDiv3.textContent = "You Win Game!"
-        body.appendChild(reset);
-        reset.style.display = 'inline';
-
-        body.removeChild(rock);
-        body.removeChild(paper);
-        body.removeChild(scissors);
-
-        newDiv.textContent = ' '
-        newDiv2.textContent = ' '
-        //reset value for next function call
-        
-    
-    }else{
-        newDiv3.textContent = "Computer Wins Game!"
-        body.appendChild(reset);
-        reset.style.display = 'inline';
-
-
-        body.removeChild(rock);
-        body.removeChild(paper);
-        body.removeChild(scissors);
-
-        newDiv.textContent = ' '
-        newDiv2.textContent = ' '
-        //reset value for next function call
-        
-    }
-}
 // code to get input from 3 buttons on the ui
 
 start.addEventListener('click', e =>{
-    body.appendChild(rock)
-    body.appendChild(paper)
-    body.appendChild(scissors)
-    body.appendChild(newDiv2);
-    body.appendChild(newDiv);
-    body.appendChild(newDiv3);
-    body.appendChild(userPoints);
-    body.appendChild(computerPoints);
+    div.appendChild(rock)
+    div.appendChild(paper)
+    div.appendChild(scissors)
+    div.appendChild(newDiv2);
+    div.appendChild(newDiv);
+    div.appendChild(newDiv3);
+    div.appendChild(userPoints);
+    div.appendChild(computerPoints);
     
 
     
@@ -183,26 +145,61 @@ reset.addEventListener('click',e =>{
 
 rock.addEventListener('click', e =>{
     playerChoice = 'rock';
-    oneRound(playerChoice, computerChoice);
-    userPoints.textContent = `User Wins:${userWins}`;
-    computerPoints.textContent = `Computer Wins:${computerWins}`;
-    
 });
 paper.addEventListener('click', e =>{
     playerChoice = 'paper';
-    oneRound(playerChoice, computerChoice);
-    userPoints.textContent = `User Wins:${userWins}`;
-    computerPoints.textContent = `Computer Wins:${computerWins}`;
-    
 });
 scissors.addEventListener('click', e =>{
     playerChoice = 'scissors';
-    oneRound(playerChoice, computerChoice);
-    userPoints.textContent = `User Wins:${userWins}`;
-    computerPoints.textContent = `Computer Wins:${computerWins}`;
-    
 });
 
+div.addEventListener('click', event => {
+    if(event.target.tagName === 'BUTTON'){
+        oneRound(playerChoice, computerChoice);
+        userPoints.textContent = `User Wins:${userWins}`;
+        computerPoints.textContent = `Computer Wins:${computerWins}`;
 
+        if (userWins <= 5 || computerWins <= 5 ){
+
+            // check who wins the 5 rounds
+            if (userWins === computerWins){
+                newDiv3.textContent = "Draw Game!"
+                .appendChild(reset);
+                //reset values for next function call
+            
+    
+            }else if(userWins > computerWins){
+                newDiv3.textContent = "You Win Game!"
+                div.appendChild(reset);
+                reset.style.display = 'inline';
+    
+                div.removeChild(rock);
+                div.removeChild(paper);
+                div.removeChild(scissors);
+    
+                newDiv.textContent = ' '
+                newDiv2.textContent = ' '
+            //reset value for next function call
+            
+        
+            }else{
+                newDiv3.textContent = "Computer Wins Game!"
+                div.appendChild(reset);
+                reset.style.display = 'inline';
+    
+    
+                div.removeChild(rock);
+                div.removeChild(paper);
+                div.removeChild(scissors);
+        
+                newDiv.textContent = ' '
+                newDiv2.textContent = ' '
+                //reset value for next function call
+            
+            }
+        }
+    }
+    
+})
 
 // game();
