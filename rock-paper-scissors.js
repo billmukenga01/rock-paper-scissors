@@ -37,6 +37,11 @@ let computerWins = 0;
 //player Choice variable
 let playerChoice = ' ';
 
+rock.textContent = 'Rock';
+paper.textContent = 'Paper';
+scissors.textContent = 'Scissors';
+reset.textContent = 'Reset Game';
+
 //function expression to save the value of the function that generates the rock, paper, or scissors randomly
 const computerChoice = function getComputerChoice(){
 
@@ -65,47 +70,9 @@ function oneRound(playerPlay, computerPlay){
     const playerSelection = playerPlay;
     const computerSelection = computerPlay();
 
-    //check the first to 5 points
+   
 
-    if (userWins >= 5 || computerWins >= 5){
-
-        // check who wins the 5 rounds
-        if (userWins === computerWins){
-            newDiv3.textContent = "Draw Game!"
-            body.appendChild(reset);
-            //reset values for next function call
-            
-    
-        }else if(userWins > computerWins){
-            newDiv3.textContent = "You Win Game!"
-            body.appendChild(reset);
-            reset.style.display = 'inline';
-
-            body.removeChild(rock);
-            body.removeChild(paper);
-            body.removeChild(scissors);
-
-            newDiv.textContent = ' '
-            newDiv2.textContent = ' '
-            //reset value for next function call
-            
-        
-        }else{
-            newDiv3.textContent = "Computer Wins Game!"
-            body.appendChild(reset);
-            reset.style.display = 'inline';
-
-
-            body.removeChild(rock);
-            body.removeChild(paper);
-            body.removeChild(scissors);
-
-            newDiv.textContent = ' '
-            newDiv2.textContent = ' '
-            //reset value for next function call
-            
-        }
-    }else{
+    if(userWins < 5 || computerWins < 5){
         //check to see who wins round and increment either userWins or computerWins and return a string value
 
         if(playerSelection === 'rock' && computerSelection === 'rock'){
@@ -142,10 +109,48 @@ function oneRound(playerPlay, computerPlay){
             newDiv2.textContent = `Computer Choice: ${computerSelection}`
             newDiv.textContent =  "Draw!";
         }
-    }   
-
+    }
 }
 
+if (userWins > 4 || computerWins > 4){
+
+    // check who wins the 5 rounds
+    if (userWins === computerWins){
+        newDiv3.textContent = "Draw Game!"
+        body.appendChild(reset);
+        //reset values for next function call
+        
+
+    }else if(userWins > computerWins){
+        newDiv3.textContent = "You Win Game!"
+        body.appendChild(reset);
+        reset.style.display = 'inline';
+
+        body.removeChild(rock);
+        body.removeChild(paper);
+        body.removeChild(scissors);
+
+        newDiv.textContent = ' '
+        newDiv2.textContent = ' '
+        //reset value for next function call
+        
+    
+    }else{
+        newDiv3.textContent = "Computer Wins Game!"
+        body.appendChild(reset);
+        reset.style.display = 'inline';
+
+
+        body.removeChild(rock);
+        body.removeChild(paper);
+        body.removeChild(scissors);
+
+        newDiv.textContent = ' '
+        newDiv2.textContent = ' '
+        //reset value for next function call
+        
+    }
+}
 // code to get input from 3 buttons on the ui
 
 start.addEventListener('click', e =>{
@@ -199,11 +204,6 @@ scissors.addEventListener('click', e =>{
     
 });
 
-//change the text content of rock paper scissors
-rock.textContent = 'Rock';
-paper.textContent = 'Paper';
-scissors.textContent = 'Scissors';
-reset.textContent = 'Reset Game';
 
 
 // game();
